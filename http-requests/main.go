@@ -14,10 +14,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	
-	if err != nil {
-		panic(err)
-	}
 	defer request.Body.Close() // Close the connection after the function ends. Defers are executed in LIFO order
 
 	response, err := io.ReadAll(request.Body)
